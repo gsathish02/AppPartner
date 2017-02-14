@@ -41,14 +41,14 @@
  * 7) If the response is successful display the success message AND how long the API call took in milliseconds in a UIAlertView
  *
  * 8) When login is successful, tapping 'OK' in the UIAlertView should bring you back to the main menu.
-**/
+ **/
 
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     self.title = @"Login";
-   
+    
     //Corner
     [_userName.layer setBorderColor:[[[UIColor blackColor] colorWithAlphaComponent:0.5] CGColor]];
     [_userName.layer setBorderWidth:2.0];
@@ -59,6 +59,14 @@
     [_password.layer setBorderWidth:2.0];
     _password.layer.cornerRadius = 5;
     _password.clipsToBounds = YES;
+    
+    
+}
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:false];
+    //Padding
+    self.userName.layer.sublayerTransform = CATransform3DMakeTranslation(10, 0, 0);
+    self.password.layer.sublayerTransform = CATransform3DMakeTranslation(10, 0, 0);
     
 }
 
@@ -71,21 +79,19 @@
 - (IBAction)didPressLoginButton:(id)sender
 {
     LoginClient *loginClient = [[LoginClient alloc]init];
-
     if([_userName.text  isEqual: @""] || [_password.text  isEqual: @""]){
         [self showAlertView:@"Fields should not be empty" withMessage:nil];
     }else{
-       
-    [loginClient loginWithUsername:_userName.text password:_password.text completion:^(NSDictionary* result, CFTimeInterval timeTaken){
-        
-        NSString * Status = [result objectForKey:@"message"];
-        if(timeTaken >0){
-            NSString * duration = [NSString stringWithFormat: @"Operation took %2.2f sec", timeTaken];
-            [self showAlertView:Status withMessage:duration];
-        }else{
-            [self showAlertView:Status withMessage:nil];
-        }
-    }];
+        [loginClient loginWithUsername:_userName.text password:_password.text completion:^(NSDictionary* result, CFTimeInterval timeTaken){
+            
+            NSString * Status = [result objectForKey:@"message"];
+            if(timeTaken >0){
+                NSString * duration = [NSString stringWithFormat: @"Operation took %2.2f sec", timeTaken];
+                [self showAlertView:Status withMessage:duration];
+            }else{
+                [self showAlertView:Status withMessage:nil];
+            }
+        }];
     }
 }
 

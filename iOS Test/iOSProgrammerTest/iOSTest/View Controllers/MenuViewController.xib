@@ -22,7 +22,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Fa-5D-jYS" userLabel="UIButton" customClass="RoundedButton">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Fa-5D-jYS" userLabel="UIButton" customClass="RoundedButton">
                     <rect key="frame" x="56" y="144" width="263" height="56"/>
                     <color key="backgroundColor" red="0.36862745098039218" green="0.36862745098039218" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="1"/>
@@ -30,8 +30,7 @@
                         <constraint firstAttribute="height" constant="56" id="YcE-IA-jay"/>
                     </constraints>
                     <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
-                    <inset key="titleEdgeInsets" minX="82" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    <inset key="imageEdgeInsets" minX="24" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="24" minY="0.0" maxX="164" maxY="0.0"/>
                     <state key="normal" title="Chat" image="ic_chat">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -42,14 +41,13 @@
                         <action selector="didPressChatButton:" destination="-1" eventType="touchUpInside" id="HUM-Si-lO9"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9uL-ib-Ayk" userLabel="UIButton" customClass="RoundedButton">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9uL-ib-Ayk" userLabel="UIButton" customClass="RoundedButton">
                     <rect key="frame" x="56" y="304" width="263" height="56"/>
                     <color key="backgroundColor" red="0.36862745098039218" green="0.36862745098039218" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="56" id="0eR-Ix-elw"/>
                     </constraints>
-                    <inset key="titleEdgeInsets" minX="78" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    <inset key="imageEdgeInsets" minX="24" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="24" minY="0.0" maxX="143" maxY="0.0"/>
                     <state key="normal" title="Animation" image="ic_animation">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -60,14 +58,13 @@
                         <action selector="didPressAnimationButton:" destination="-1" eventType="touchUpInside" id="Ys4-gt-GQw"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6JX-Lv-AOm" userLabel="UIButton" customClass="RoundedButton">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6JX-Lv-AOm" userLabel="UIButton" customClass="RoundedButton">
                     <rect key="frame" x="56" y="224" width="263" height="56"/>
                     <color key="backgroundColor" red="0.36862745098039218" green="0.36862745098039218" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="56" id="6nP-jl-oWv"/>
                     </constraints>
-                    <inset key="titleEdgeInsets" minX="89" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    <inset key="imageEdgeInsets" minX="24" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="24" minY="0.0" maxX="164" maxY="0.0"/>
                     <state key="normal" title="Login" image="ic_login">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
